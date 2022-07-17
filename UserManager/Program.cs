@@ -21,7 +21,7 @@ namespace UserManager
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            IUserView view = new UserView();
+            IUserView view = new UserViewMaterial();
             IUserRepository repository = new UserRespository();
             new UserPresenter(view, repository);
             Application.Run((Form)view);

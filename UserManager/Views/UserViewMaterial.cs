@@ -1,4 +1,8 @@
-﻿using System;
+﻿using ReaLTaiizor.Colors;
+using ReaLTaiizor.Controls;
+using ReaLTaiizor.Forms;
+using ReaLTaiizor.Util;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,17 +14,17 @@ using System.Windows.Forms;
 
 namespace UserManager.Views
 {
-    public partial class UserView : Form, IUserView
+    public partial class UserViewMaterial : Form, IUserView
     {
         // Fields
         private string message;
         private bool isEdit;
         private bool isSuccessful;
 
-        // Constructor
-        public UserView()
+        public UserViewMaterial()
         {
             InitializeComponent();
+
             AssociateAndRaiseViewEvents();
             tabControl1.TabPages.Remove(tabUserDetail);
         }
@@ -34,7 +38,7 @@ namespace UserManager.Views
                     SearchEvent?.Invoke(this, EventArgs.Empty);
             };
             // Add new
-            btnAddNew.Click += delegate { 
+            btnAddNew.Click += delegate {
                 AddNewEvent?.Invoke(this, EventArgs.Empty);
                 tabControl1.TabPages.Remove(tabListUser);
                 tabControl1.TabPages.Add(tabUserDetail);
@@ -50,7 +54,7 @@ namespace UserManager.Views
             // Save Changes
             btnSave.Click += delegate {
                 SaveEvent?.Invoke(this, EventArgs.Empty);
-                if(isSuccessful)
+                if (isSuccessful)
                 {
                     tabControl1.TabPages.Remove(tabUserDetail);
                     tabControl1.TabPages.Add(tabListUser);
