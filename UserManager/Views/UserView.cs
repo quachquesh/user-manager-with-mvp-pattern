@@ -84,7 +84,8 @@ namespace UserManager.Views
                 }
             };
             // Cancel
-            btnCancel.Click += delegate { 
+            btnCancel.Click += delegate
+            {
                 CancelEvent?.Invoke(this, EventArgs.Empty);
                 tabControl1.TabPages.Remove(tabUserDetail);
                 tabControl1.TabPages.Add(tabListUser);
