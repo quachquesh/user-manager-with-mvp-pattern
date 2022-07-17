@@ -8,7 +8,7 @@ namespace UserManager.Models
 {
     public interface IUserRepository
     {
-        void Add(UserModel userModel);
+        Task<bool> Add(UserModel userModel);
         void Edit(UserModel userModel);
         void Delete(string id);
         Task<IEnumerable<UserModel>> GetAll();

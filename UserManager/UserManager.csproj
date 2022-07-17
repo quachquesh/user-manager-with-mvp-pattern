@@ -72,6 +72,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Views\AsyncEventHandler.cs" />
     <Compile Include="Views\IUserView.cs" />
     <Compile Include="Views\UserViewMaterial.cs">
       <SubType>Form</SubType>

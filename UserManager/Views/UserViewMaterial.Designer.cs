@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new ReaLTaiizor.Controls.MaterialTabControl();
             this.tabListUser = new System.Windows.Forms.TabPage();
             this.btnDelete = new ReaLTaiizor.Controls.MaterialButton();
@@ -71,6 +71,7 @@
             // 
             // tabListUser
             // 
+            this.tabListUser.BackColor = System.Drawing.Color.Transparent;
             this.tabListUser.Controls.Add(this.btnDelete);
             this.tabListUser.Controls.Add(this.btnEdit);
             this.tabListUser.Controls.Add(this.btnAddNew);
@@ -84,7 +85,6 @@
             this.tabListUser.Size = new System.Drawing.Size(654, 406);
             this.tabListUser.TabIndex = 0;
             this.tabListUser.Text = "List User";
-            this.tabListUser.UseVisualStyleBackColor = true;
             // 
             // btnDelete
             // 
@@ -173,8 +173,8 @@
             this.dataGridUser.AllowUserToAddRows = false;
             this.dataGridUser.AllowUserToDeleteRows = false;
             this.dataGridUser.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(239)))), ((int)(((byte)(249)))));
-            this.dataGridUser.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(239)))), ((int)(((byte)(249)))));
+            this.dataGridUser.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridUser.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -183,25 +183,25 @@
             this.dataGridUser.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.dataGridUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridUser.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(25)))), ((int)(((byte)(70)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 12F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(25)))), ((int)(((byte)(70)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridUser.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(25)))), ((int)(((byte)(70)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Roboto", 12F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(25)))), ((int)(((byte)(70)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridUser.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Roboto", 12F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridUser.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Roboto", 12F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridUser.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridUser.EnableHeadersVisualStyles = false;
             this.dataGridUser.Location = new System.Drawing.Point(5, 53);
             this.dataGridUser.MultiSelect = false;
@@ -233,6 +233,7 @@
             // 
             // tabUserDetail
             // 
+            this.tabUserDetail.BackColor = System.Drawing.Color.Transparent;
             this.tabUserDetail.Controls.Add(this.materialLabel3);
             this.tabUserDetail.Controls.Add(this.materialLabel2);
             this.tabUserDetail.Controls.Add(this.materialLabel1);
@@ -245,10 +246,9 @@
             this.tabUserDetail.Margin = new System.Windows.Forms.Padding(2);
             this.tabUserDetail.Name = "tabUserDetail";
             this.tabUserDetail.Padding = new System.Windows.Forms.Padding(2);
-            this.tabUserDetail.Size = new System.Drawing.Size(654, 343);
+            this.tabUserDetail.Size = new System.Drawing.Size(654, 406);
             this.tabUserDetail.TabIndex = 1;
             this.tabUserDetail.Text = "User Detail";
-            this.tabUserDetail.UseVisualStyleBackColor = true;
             // 
             // materialLabel3
             // 

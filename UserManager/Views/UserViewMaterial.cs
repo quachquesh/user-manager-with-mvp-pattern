@@ -52,8 +52,10 @@ namespace UserManager.Views
                 tabUserDetail.Text = "Edit user";
             };
             // Save Changes
-            btnSave.Click += delegate {
-                SaveEvent?.Invoke(this, EventArgs.Empty);
+            btnSave.Click += async delegate
+            {
+                await SaveEvent?.Invoke(this, EventArgs.Empty);
+                Console.WriteLine("--- SaveEvent?.Invoke ----");
                 if (isSuccessful)
                 {
                     tabControl1.TabPages.Remove(tabUserDetail);
@@ -61,7 +63,7 @@ namespace UserManager.Views
                 }
                 MessageBox.Show(Message);
             };
-            txtName.KeyDown += (s, e) =>
+            KeyEventHandler keyEventSave = (s, e) =>
             {
                 if (e.KeyCode == Keys.Enter)
                 {
@@ -74,19 +76,8 @@ namespace UserManager.Views
                     MessageBox.Show(Message);
                 }
             };
-            txtEmail.KeyDown += (s, e) =>
-            {
-                if (e.KeyCode == Keys.Enter)
-                {
-                    SaveEvent?.Invoke(this, EventArgs.Empty);
-                    if (isSuccessful)
-                    {
-                        tabControl1.TabPages.Remove(tabUserDetail);
-                        tabControl1.TabPages.Add(tabListUser);
-                    }
-                    MessageBox.Show(Message);
-                }
-            };
+            txtName.KeyDown += keyEventSave;
+            txtEmail.KeyDown += keyEventSave;
             // Cancel
             btnCancel.Click += delegate
             {
@@ -117,7 +108,7 @@ namespace UserManager.Views
         public event EventHandler AddNewEvent;
         public event EventHandler EditEvent;
         public event EventHandler DeleteEvent;
-        public event EventHandler SaveEvent;
+        public event AsyncEventHandler SaveEvent;
         public event EventHandler CancelEvent;
 
         public void SetUserListBindingSource(BindingSource userList)

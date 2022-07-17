@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace UserManager.Views
 {
-    internal interface IUserView
+    public interface IUserView
     {
         // Properties - Fields
         string Id { get; set; }
@@ -24,7 +24,7 @@ namespace UserManager.Views
         event EventHandler AddNewEvent;
         event EventHandler EditEvent;
         event EventHandler DeleteEvent;
-        event EventHandler SaveEvent;
+        event AsyncEventHandler SaveEvent;
         event EventHandler CancelEvent;
 
         // Methods

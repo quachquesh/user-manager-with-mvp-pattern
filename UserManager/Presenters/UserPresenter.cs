@@ -33,16 +33,17 @@ namespace UserManager.Presenters
             // Set users bindind source
             this.view.SetUserListBindingSource(usersBindingSource);
             // Load user list view
-            LoadAllUserList();
+            _ = LoadAllUserList();
             // Show view
             this.view.Show();
         }
 
         // Methods
-        private async void LoadAllUserList()
+        private async Task<bool> LoadAllUserList()
         {
             userList = await userRepository.GetAll();
             usersBindingSource.DataSource = userList; // Set data source
+            return true;
         }
 
         private async void SearchUser(object sender, EventArgs e)
@@ -72,7 +73,7 @@ namespace UserManager.Presenters
             view.IsEdit = true;
         }
 
-        private void SaveUser(object sender, EventArgs e)
+        private async Task SaveUser(object sender, EventArgs e)
         {
             var model = new UserModel();
             model.Id = view.Id;
@@ -83,17 +84,19 @@ namespace UserManager.Presenters
                 new Common.ModelDataValidation().Validate(model);
                 if (view.IsEdit)
                 {
-                    userRepository.Edit(model);
+                    await Task.Run(() => userRepository.Edit(model));
                     view.Message = "User edited successfully";
                 }
                 else
                 {
-                    userRepository.Add(model);
+                    await userRepository.Add(model);
                     view.Message = "User added successfully";
                 }
+                Console.WriteLine("--- SaveEvent ok ----");
                 view.IsSuccessful = true;
-                LoadAllUserList();
+                await LoadAllUserList();
                 CleanViewFields();
+                Console.WriteLine("--- SaveEvent end ----");
             }
             catch (Exception ex)
             {

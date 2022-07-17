@@ -15,7 +15,7 @@ namespace UserManager._Repositories
     {
         // client.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
         private Env env = new Env();
-        public async void Add(UserModel userModel)
+        public async Task<bool> Add(UserModel userModel)
         {
             using (var client = new HttpClient())
             {
@@ -27,6 +27,8 @@ namespace UserManager._Repositories
                 //    userList = JsonConvert.DeserializeObject<List<UserModel>>(responseBody);
                 //}
             }
+            Console.WriteLine("res true");
+            return true;
         }
 
         public async void Delete(string id)
